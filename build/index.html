@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shirlyn's Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="/src/input.css">
+<link rel="favicon" href="/img/favicon .ico">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- Home Page -->
+<div class="image">
+    <img src="/img/cat.jpg" alt="cat" title="meow">
+</div>
+<section class="home">
+  <h1>Welcome to My Portfolio</h1>
+  <p>The values that drive me: <span id="name"></span></p>
+</section>
+
+<!-- Script for name animation -->
+<script>
+  const nameSpan = document.getElementById('name');
+  const names = ['Passion', 'Creativity', 'Dedication'];
+  let index = 0;
+
+  function animateName() {
+    nameSpan.textContent = names[index];
+    index = (index + 1) % names.length;
+    setTimeout(animateName, 2000); // Change name every 2 seconds
+  }
+
+  animateName();
+</script>
+
+</body>
+</html>
